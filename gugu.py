@@ -1,17 +1,13 @@
-# 숫자 두개를 입력을 받아서
-# +, -, *, /를 출력하는 프로그램을 만들어 보자
-  a =int ("첫 번째 숫자를 입력하세요: "))
-        num2 = float(input("두 번째 숫자를 입력하세요: "))
-        break  # 올바른 숫자를 입력하면 루프 종료
-    except ValueError:
-        print("숫자를 정확히 입력해주세요!")
+  # 사용자로부터 입력을 받는 함수
+def print_multiplication_table():
+    # 사용자에게 숫자를 입력받습니다.
+    number = int(input("구구단을 출력할 숫자를 입력하세요 (예: 2): "))
+    
+    # 구구단 출력
+    print(f"{number}단:")
+    for i in range(1, 10):  # 1부터 9까지 반복
+        result = number * i
+        print(f"{number} x {i} = {result}")
 
-print(f"{a} + {b} = {a + b}")
-print(f"{a} - {b} = {a - b}")
-print(f"{a} * {b} = {a * b}")
-
-# 0으로 나누는 경우 예외 처리
-if num2 != 0:
-    print(f"{a} / {b} = {a / b}")
-else:
-    print("0으로 나눌 수 없습니다!")
+# 프로그램 실행
+print_multiplication_table()

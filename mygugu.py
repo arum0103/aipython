@@ -1,19 +1,16 @@
 # 숫자 두개를 입력을 받아서
-# +, -, *, / 를 출력하는 프로그램을 만들어 보자
-while True:
-    try:
-        num1 = float(input("첫 번째 숫자를 입력하세요: "))
-        num2 = float(input("두 번째 숫자를 입력하세요: "))
-        break  # 숫자가 정상적으로 입력되면 루프 탈출
-    except ValueError:
-        print("숫자만 입력하세요!")  # 숫자가 아닐 경우 다시 입력 요청
+# +, -, *, / 를 출력 하는 프로그램을 만들어 보자
+# 사용자에게 숫자 두 개를 입력받습니다 (문자열을 int 변환)
+a = int(input("첫 번째 숫자를 입력하세요: "))
+b = int(input("두 번째 숫자를 입력하세요: "))
 
-print(f"{num1} + {num2} = {num1 + num2}")
-print(f"{num1} - {num2} = {num1 - num2}")
-print(f"{num1} * {num2} = {num1 * num2}")
+# 덧셈, 뺄셈, 곱셈, 나눗셈을 수행하고 출력
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
 
-# 0으로 나누는 경우 예외 처리
-if num2 != 0:
-        print(f"{num1} / {num2} = {num1 / num2}")
+# 나눗셈의 경우, 분모가 0이 아닐 때만 수행
+if b != 0:
+    print(f"{a} / {b} = {a / b}")
 else:
-        print("0으로 나눌 수 없습니다.")
+    print("0으로 나눌 수 없습니다.")
