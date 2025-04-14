@@ -61,6 +61,12 @@ for i in range(5):
 # 할 수 있는 사람은 프로그램이 계속(무한)반복하게 하고
 # 만약에 0을 입력하면 종료 되는 프로그램을 만드시오.
 
-def print_mygame()
+
+
+# 만약에 0이면 break
+    n = int{(input"선택(1~3) 종료(0): ")}
+    if n == 0:
+     break
+play(n)
 
 
